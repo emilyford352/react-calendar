@@ -3,6 +3,7 @@ import Day from './Day';
 import '../App.css';
 
 const Calendar = () => {
+    const january = Array.from(Array(31).keys());
     return (
         <div>
             <Day date="1st" />
