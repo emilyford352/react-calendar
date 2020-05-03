@@ -3,14 +3,14 @@ import Day from './Day';
 import '../App.css';
 
 const Calendar = () => {
-    const january = Array.from(Array(31).keys());
-    return (
-        <div>
-            <Day date="1st" />
-            <Day date="2nd" />
-            <Day date="3rd" />
-        </div>
-    );
-}
+    const january = Array.from(Array(31).keys()); //Array
+
+    return january.map((date) => {
+    	return (
+    		<Day date={date}/>
+    	);
+    });
+};
+
 
 export default Calendar;
