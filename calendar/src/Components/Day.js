@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons'
 
-const Show = (props) => {
+const Day = (props) => {
     return (
         <div>
             Create day in here...
@@ -13,4 +13,4 @@ const Show = (props) => {
     );
 }
 
-export default Show;
+export default Day;
