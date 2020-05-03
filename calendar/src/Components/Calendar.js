@@ -1,15 +1,32 @@
 import React from 'react';
 import Day from './Day';
+import MonthChanger from './Month-Changer';
 import '../App.css';
 
-const Calendar = () => {
-    const january = Array.from(Array(31).keys()); //Array
+class Calendar extends React.Component {
+    constructor(props) {
+        super(props);
 
-    return january.map((date) => {
-    	return (
-    		<Day date={date}/>
-    	);
-    });
+        this.state = {
+            currentMonth: 'January'
+        }
+    }
+    render() {
+        const january = Array.from(Array(31).keys());
+        return (
+            <div>
+                <MonthChanger />
+                { this.state.currentMonth }
+                {
+                    january.map((date) => {
+                        return (
+                            <Day date={date}/>
+                    );
+                    })
+                }
+            </div>
+        )
+    }
 };
 
 
